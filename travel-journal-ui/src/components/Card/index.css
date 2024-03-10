@@ -1,0 +1,27 @@
+.custom-container img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.custom-container{
+    display: flex;
+    flex-wrap: inherit;
+    align-items: center;
+    justify-content: space-between;
+    max-height: 300px;
+    max-width: 375px;
+}
+
+.custom-col{
+    flex: 0 0 auto;
+    width: 32%;
+}
+
+.color-gray{
+    color: gray;
+}
+
+button {
+    margin: 5px;
+}
