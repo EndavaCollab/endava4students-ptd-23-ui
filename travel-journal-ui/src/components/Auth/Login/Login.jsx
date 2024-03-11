@@ -53,7 +53,7 @@ const Login = () => {
       </div>
 
       <button type="submit" className="submit-btn">
-        Login
+        Log In
       </button>
       <span onClick={() => navigate("/register")} className="register-link">
         You can create an account here{" "}

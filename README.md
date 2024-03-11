@@ -11,4 +11,3 @@ See `/travel-journal-ui/src/README.md`
 
 ## Build the docker images:
 Please check the api module code repository Readme file for instructions on building and running the docker images.
-
