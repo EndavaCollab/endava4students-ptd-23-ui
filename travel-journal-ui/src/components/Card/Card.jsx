@@ -25,12 +25,13 @@ const Card = () => {
                     </div>
                 </div>
                 <div className="d-flex flex-row justify-content-between">
-                    <button className={"btn w-50 btn-secondary"}>
-                        <MdModeEdit />
+                    <button className={"btn w-50 btn-secondary color-button"}>
+                        <MdModeEdit style={{color: "black"}}/>
                     </button>
-                    <button className={"btn w-50 btn-secondary"}>
-                        <RiDeleteBin6Line />
+                    <button className={"btn w-50 btn-secondary color-button"}>
+                        <RiDeleteBin6Line style={{color: "black"}}/>
                     </button>
+
 
                 </div>
             </div>
