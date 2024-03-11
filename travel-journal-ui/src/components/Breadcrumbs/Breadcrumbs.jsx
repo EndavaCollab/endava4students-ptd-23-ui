@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import "./Breadcrumbs.css"
 
+
 const Breadcrumbs = () => {
         // Get the current path of the page
         const currentPath = window.location.pathname;
