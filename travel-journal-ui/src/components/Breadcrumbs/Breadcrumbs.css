@@ -1,0 +1,32 @@
+#breadcrumbs ol {
+    list-style: none;
+    padding: 10px;
+    margin: 10px;
+}
+
+.breadcrumb-item-first {
+    display: inline;
+}
+
+.breadcrumb-item {
+    display: inline;
+    color: #999;
+}
+
+.breadcrumb-item-first a {
+    text-decoration: none;
+    color: black;
+}
+
+.breadcrumb-item a {
+    text-decoration: none;
+    color: #999;
+}
+
+.breadcrumb-link:hover {
+    color: #333;
+}
+
+
+
+
