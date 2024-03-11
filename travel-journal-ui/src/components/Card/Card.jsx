@@ -1,5 +1,7 @@
 import travel from '../../assets/login-bg.jpg'
 import './index.css'
+import { MdModeEdit } from "react-icons/md";
+import { RiDeleteBin6Line } from "react-icons/ri";
 
 const Card = () => {
     return (
@@ -23,9 +25,14 @@ const Card = () => {
                     </div>
                 </div>
                 <div className="d-flex flex-row justify-content-between">
-                    <button className={"btn w-50 btn-secondary"}>Test</button>
-                    <button className={"btn w-50 btn-secondary"}>Test</button>
-                    {/*    todo: buttons*/}
+                    <button className={"btn w-50 btn-secondary color-button"}>
+                        <MdModeEdit style={{color: "black"}}/>
+                    </button>
+                    <button className={"btn w-50 btn-secondary color-button"}>
+                        <RiDeleteBin6Line style={{color: "black"}}/>
+                    </button>
+
+
                 </div>
             </div>
         </div>
