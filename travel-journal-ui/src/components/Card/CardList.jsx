@@ -1,9 +1,9 @@
 import Card from "./Card";
 import './index.css'
-import type CardModel from "../../Models/CardModel.jsx";
+
 const CardList = () => {
     // todo: call api to get entitiesMock
-    let entitiesMock : Array<CardModel> = [
+    let entitiesMock = [
         {id: "1", city: "Craiova", travelDate: "miercuri, 13 martie 2024", noNotes: "6", price: "200", currency: "lei"},
         {id: "2", city: "Pitesti", travelDate: "miercuri, 13 martie 2024", noNotes: "12", price: "245", currency: "lei"},
         {id: "3", city: "Bucuresti", travelDate: "miercuri, 13 martie 2024", noNotes: "2", price: "12", currency: "lei"},
