@@ -1,25 +1,14 @@
 import Card from "./Card";
 import './index.css'
 
-const CardList = () => {
+const CardList = ({ items, onEdit, onDelete }) => {
     return (
-        //todo: for through all components and display them
         <div className="d-flex flex-wrap flex-row p-2 gap-4">
-            <div className="col custom-col">
-                <Card/>
-            </div>
-            <div className="col custom-col">
-                <Card/>
-            </div>
-            <div className="col custom-col">
-                <Card/>
-            </div>
-            <div className="col custom-col">
-                <Card/>
-            </div>
-            <div className="col custom-col">
-                <Card/>
-            </div>
+            {items.map((item, index) => (
+                <div key={index} className="col custom-col">
+                    <Card item={item} onEdit={onEdit} onDelete={onDelete} />
+                </div>
+            ))}
         </div>
     );
 };

@@ -16,18 +16,16 @@ function App() {
 
   return (
     <>
-      {/*{isAuthenticated && <Navbar />}*/}
-        <Navbar />
+      {isAuthenticated && <Navbar />}
       <Routes>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/register" element={<Register />}></Route>
-        <Route path="/" element={<Home />}></Route>
-        {/*<Route
+        <Route
           path="/"
           element={
             isAuthenticated ? <Home /> : <Navigate to="/login" />
           }
-        />*/}
+        />
       </Routes>
     </>
   );
