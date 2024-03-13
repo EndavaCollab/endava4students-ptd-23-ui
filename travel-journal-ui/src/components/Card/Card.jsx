@@ -18,8 +18,7 @@ const Card = ({ item, onEdit, onDelete }) => {
             <div className="card-body">
                 <div className={"custom-container"}>
                     {/*It breaks the app if is not any image uploaded*/}
-                    {/*<img src={URL.createObjectURL(file)} className={"rounded-4 border-1 border-dark"} alt={"travel-image"}></img>*/}
-                    <img src={file} className={"rounded-4 border-1 border-dark"} alt={"travel-image"}></img>
+                    <img src={URL.createObjectURL(file)} className={"rounded-4 border-1 border-dark"} alt={"travel-image"}></img>
                 </div>
                 <div className={"d-flex flex-column mt-4 mb-2"}>
                     <p className={"fs-3"}>{destination}</p>
