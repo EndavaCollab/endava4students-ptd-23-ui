@@ -16,21 +16,19 @@ function App() {
 
     return (
         <>
-            {/*todo: uncomment this when the login is done*/}
-            {/*{isAuthenticated && <Navbar />}*/}
+            {isAuthenticated && <Navbar />}
             <Navbar/>
             <div className={"container"}>
                 <Routes>
                     <Route path="/login" element={<Login/>}></Route>
                     <Route path="/register" element={<Register/>}></Route>
                     <Route path="/" element={<Home/>}></Route>
-                    {/*todo: uncomment this when the login is done*/}
-                    {/*<Route
+                    <Route
                             path="/"
                              element={
                              isAuthenticated ? <Home /> : <Navigate to="/login" />
                             }
-        />*/}
+        />
                 </Routes>
             </div>
 
