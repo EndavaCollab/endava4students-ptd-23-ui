@@ -17,12 +17,10 @@ function App() {
     return (
         <>
             {isAuthenticated && <Navbar />}
-            <Navbar/>
             <div className={"container"}>
                 <Routes>
                     <Route path="/login" element={<Login/>}></Route>
                     <Route path="/register" element={<Register/>}></Route>
-                    <Route path="/" element={<Home/>}></Route>
                     <Route
                             path="/"
                              element={
