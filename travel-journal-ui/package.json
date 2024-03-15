@@ -14,6 +14,7 @@
     "js-sha256": "^0.9.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-icons": "^5.0.1",
     "react-router-dom": "^6.14.2"
   },
   "devDependencies": {
