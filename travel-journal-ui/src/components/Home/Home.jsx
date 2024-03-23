@@ -1,4 +1,5 @@
-import React from 'react';
+import React from "react";
+import Breadcrumbs from "../Breadcrumbs/Breadcrumbs";
 import CardList from "../CardList/CardList.jsx";
 import NewTravel from "../NewTravel/NewTravel.jsx";
 import travelImage from '../../assets/login-bg.jpg';
@@ -24,6 +25,7 @@ const Home = () => {
     return (
         <div>
             <h1>Home Page</h1>
+            <Breadcrumbs />
             <CardList entities={entitiesMock}></CardList>
             <NewTravel onClick={handleNewTravelClick} />
         </div>
