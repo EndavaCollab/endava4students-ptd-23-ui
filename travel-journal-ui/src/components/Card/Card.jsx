@@ -2,7 +2,7 @@ import './index.css'
 import deleteIcon from "../../assets/deleteIcon.svg"
 import editIcon from "../../assets/editIcon.svg";
 
-const Card = ({card}) => {
+const Card = ({ card, onEdit, onDelete }) => {
     return (
         <div className="card shadow bg-white rounded-4 border-1 border-dark">
             <div className="card-body">
@@ -24,10 +24,10 @@ const Card = ({card}) => {
                     </div>
                 </div>
                 <div className="d-flex flex-row justify-content-between">
-                    <button className="btn button-container">
+                    <button className="btn button-container" onClick={onEdit}>
                         <img src={editIcon} alt="edit"></img>
                     </button>
-                    <button className="btn button-container">
+                    <button className="btn button-container" onClick={onDelete}>
                         <img src={deleteIcon} alt="delete"></img>
                     </button>
                 </div>
