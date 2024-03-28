@@ -8,16 +8,31 @@ import { AuthContext } from "../../../context/AuthContext";
 import { API_URL } from "../../../config";
 
 import "./index.css";
+import error from "eslint-plugin-react/lib/util/error.js";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [emailError, setEmailError] = useState("");
+  const [passwordError, setPasswordError] = useState("");
   const { setIsAuthenticated } = useContext(AuthContext);
 
   const navigate = useNavigate();
 
   const submit = (e) => {
     e.preventDefault();
+
+      if (!email) {
+          setEmailError("Email address cannot be empty.");
+      } else {
+          setEmailError("");
+      }
+
+      if (!password) {
+          setPasswordError("Password cannot be empty.");
+      } else {
+          setPasswordError("");
+      }
 
     const hashedPassword = sha256(password);
 
@@ -37,6 +52,7 @@ const Login = () => {
       })
       .catch((error) => {
         console.error("Error:", error);
+
       });
   };
 
@@ -64,12 +80,22 @@ const Login = () => {
                           <label>Email</label>
                           <input type="email" placeholder="john.doe@domain.com"
                                  onChange={(e) => setEmail(e.target.value)}/>
+                          {emailError && (
+                              <div className="error-background">
+                              <div className="error-message">{emailError}</div>
+                              </div>
+                              )}
                       </div>
 
                       <div className="input-field">
                           <label>Password</label>
                           <input type="password" placeholder="Type in your password"
                                  onChange={(e) => setPassword(e.target.value)}/>
+                          {passwordError && (
+                              <div className="error-background">
+                              <div className="error-message">{passwordError}</div>
+                              </div>
+                              )}
                       </div>
 
                       <button type="submit" className="submit-btn">
