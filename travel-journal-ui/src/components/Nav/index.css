@@ -1,15 +1,19 @@
 .navigation {
     display: flex;
     justify-content: space-between;
-    padding: 20px;
-    border-bottom: 1px solid #EAEAEA;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    align-items: center;
 }
 
 .logout {
-
-    font-size: 16px;
+    background: transparent;
+    border: none;
+    padding: 0px 0px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 .logout:hover {
-    background: #EAEAEA;
+    filter: brightness(90%);
 }

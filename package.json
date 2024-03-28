@@ -1,0 +1,12 @@
+{
+  "name": "endava4students-ptd-23-ui",
+  "version": "1.0.0",
+  "description": "**Important!** Please make sure to install Docker Desktop application in order to be able to use `docker` and `docker-compose` commands.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

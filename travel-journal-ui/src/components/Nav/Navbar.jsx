@@ -1,8 +1,11 @@
 import { useContext } from "react";
 import { AuthContext } from "../../context/AuthContext";
-import { useNavigate } from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
+import logo from "../../assets/Logo.svg";
+import logoutIcon from "../../assets/Button_logout.svg";
 
 import "./index.css";
+import Home from "../Home/Home.jsx";
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -10,7 +13,7 @@ const Navbar = () => {
 
   return (
     <nav className="navigation">
-      <h1>Travel Journal</h1>
+        <Link to={Home}> <img src={logo} alt="logo" className="logo" /> </Link>
       <button
         type="button"
         onClick={() => {
@@ -19,7 +22,7 @@ const Navbar = () => {
         }}
         className="logout"
       >
-        Logout
+        <img src={logoutIcon} alt="logout" />
       </button>
     </nav>
   );

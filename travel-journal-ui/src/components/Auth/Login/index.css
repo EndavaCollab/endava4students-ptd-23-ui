@@ -1,14 +1,20 @@
+/*used for checkmark*/
+@import url('https://fonts.googleapis.com/css2?family=Material+Icons');
+
+/*need the google APIs Inter to match figma design*/
+@import url('https://fonts.googleapis.com/css2?family=Inter');
+
 .login-form {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     gap: 20px;
-    max-width: 300px;
-    margin: auto;
-    padding: 40px;
-    border-radius: 8px;
+    width: 36.5rem;
+    flex-shrink: 0;
+    border-radius: 24px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #000;
+    background-color: white;
   }
   
   .input-field {
@@ -16,38 +22,163 @@
     display: flex;
     flex-direction: column;
   }
-  
+
   .input-field label {
     color: #333;
     font-weight: 500;
   }
-  
-  .input-field input {
+
+.input-field input {
     padding: 10px;
-    border-radius: 4px;
-    border: 1px solid #ddd;
-  }
+    border-radius: 10px;
+    border: 1px solid #000;
+}
   
-  .submit-btn {
+  button.submit-btn {
     padding: 10px 20px;
     border-radius: 4px;
     border: none;
-    background-color: #007bff;
+    background-color: black;
     color: white;
     cursor: pointer;
     font-weight: 600;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+  }
+
+  button.submit-btn:hover {
+    background-color: #2a2929;
+  }
+
+  .login-info {
+      font-size: 20px;
   }
   
-  .submit-btn:hover {
-    background-color: #0056b3;
+  .register-link button {
+      padding: 10px 20px;
+      border-radius: 4px;
+      border: none;
+      background-color: black;
+      color: white;
+      cursor: pointer;
+      font-weight: 600;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
   }
   
-  .register-link {
-    color: #007bff;
-    cursor: pointer;
-    text-decoration: underline;
+  .register-link button:hover{
+    background-color: #2a2929;
   }
-  
-  .register-link:hover {
-    color: #0056b3;
-  }
+
+ul {
+    list-style: none;
+    padding-inline: 1rem;
+    padding: 0;
+    list-style-type: none;
+    gap: 0.5625rem;
+}
+
+ul li {
+   color: #FFF;
+   font-size: 1.5rem;
+   font-style: normal;
+   font-weight: 400;
+   line-height: 2rem; /* 133.333% */
+}
+
+ul li:before {
+    content: 'check';
+    color: #FFF;
+    font-family: "Material Icons";
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 2rem; /* 133.333% */
+    padding-right: 1rem;
+
+    /* HACK */
+    position: relative;
+    top: 0.2rem;
+}
+
+.login-description {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.logo {
+margin-top: 1.517rem;
+margin-bottom: 3rem;
+}
+
+.flex-wrapper {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  /* So the background doesn't cut off on really small sizes */
+  overflow: auto;
+  background: linear-gradient( 0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100% ), url("../../../assets/login-bg.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /*
+        flex-wrapper's "justify-content: center;" would keep some parts off-screen at high zooms.
+        "margin: auto;" keeps everything centered, but also fully scrollable!
+    */
+    margin: auto;
+    gap: 5rem; /* at bungheala */
+}
+
+.flex-item {
+    padding: 20px;
+}
+
+.login-description {
+    color: white;
+}
+
+.login-description h3{
+color: #FFF;
+font-size: 1.5rem;
+font-style: normal;
+font-weight: 350; /* at bungheala */
+line-height: 2rem; /* 133.333% */
+opacity:0.7;
+margin:0;
+}
+
+.login-description h1 {
+    font-size: 90px;
+}
+
+.description-list {
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    /*need these two below for imported Inter to apply*/
+    font-family: Inter;
+    font-weight: normal;
+}

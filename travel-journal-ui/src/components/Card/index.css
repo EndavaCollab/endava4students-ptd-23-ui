@@ -1,0 +1,33 @@
+.custom-container img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.custom-container{
+    display: flex;
+    flex-wrap: inherit;
+    align-items: center;
+    justify-content: space-between;
+    max-height: 300px;
+    max-width: 375px;
+}
+
+.button-container{
+    display: flex;
+    flex-wrap: inherit;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px;
+    border: 0px;
+}
+
+.button-container img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.color-gray{
+    color: gray;
+}
