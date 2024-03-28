@@ -11,6 +11,7 @@ import Register from "./components/Auth/Register/Register";
 import "./App.css";
 import Navbar from "./components/Nav/Navbar";
 import Content from "./components/Content/Content";
+import TravelDetails from "./components/TravelDetails/TravelDetails.jsx";
 
 function App() {
   const { isAuthenticated } = useContext(AuthContext);
@@ -20,7 +21,8 @@ function App() {
       {isAuthenticated && <Navbar />}
       <Routes>
         <Route path="/login" element={<Login />}></Route>
-        <Route path="/register" element={<Register />}></Route>
+          <Route path="/register" element={<Register />}></Route>
+          <Route path="/travel-details" element={<TravelDetails />}></Route>
         <Route element={<Content />}>
             <Route
                 path="/"
