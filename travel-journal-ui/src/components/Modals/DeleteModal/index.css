@@ -1,0 +1,28 @@
+.modal-header {
+    background: black;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: flex-start;
+}
+
+h4 {
+    color: white;
+}
+
+.modal-body {
+    padding: 5px 0 0 14px;
+}
+
+.delete-paragraph {
+    padding: 30px;
+    width: 487px;
+    height: 26px;
+    left: 495px;
+    top: 433px;
+    font-style: normal;
+    font-size: 20px;
+    align-self: center;
+    color: #424242;
+}

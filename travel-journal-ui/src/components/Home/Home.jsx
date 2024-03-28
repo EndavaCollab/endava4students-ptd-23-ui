@@ -1,15 +1,11 @@
-import React from "react";
+import React, {useState} from "react";
 import Breadcrumbs from "../Breadcrumbs/Breadcrumbs";
 import CardList from "../CardList/CardList.jsx";
 import NewTravel from "../NewTravel/NewTravel.jsx";
 import travelImage from '../../assets/login-bg.jpg';
+import Modal from "../Modals/Modal/Modal.jsx";
 
 const Home = () => {
-    /*NewTravel*/
-    const handleNewTravelClick = () => {
-        console.log('New travel button clicked!');
-    };
-
     // todo: call api to get entitiesMock
     let entitiesMock = [
         {id: "1", image:travelImage, city: "Craiova", travelDate: "miercuri, 13 martie 2024", noNotes: "6", price: "200", currency: "lei"},
@@ -22,12 +18,31 @@ const Home = () => {
         {id: "8", image:travelImage, city: "CLuj-Napoca", travelDate: "miercuri, 13 martie 2024", noNotes: "3", price: "1000", currency: "lei"}
     ];
 
+    const [modalAction, setModalAction] = useState(null);
+    const [selectedCardId, setSelectedCardId] = useState(null);
+
+    const handleOpenModal = (action, cardId) => {
+        setModalAction(action);
+        setSelectedCardId(cardId);
+    };
+
+    const handleModalClose = () => {
+        setModalAction(null);
+        setSelectedCardId(null);
+    };
+
     return (
         <div>
             <h1>Home Page</h1>
             <Breadcrumbs />
-            <CardList entities={entitiesMock}></CardList>
-            <NewTravel onClick={handleNewTravelClick} />
+            <CardList entities={entitiesMock}
+                      onEdit={(cardId) => handleOpenModal("edit", cardId)}
+                      onDelete={(cardId) => handleOpenModal("delete", cardId)} />
+            <NewTravel onClick={() => setModalAction('add')} />
+
+            {modalAction && (
+                <Modal action={modalAction} cardId={selectedCardId} onClose={handleModalClose} />
+            )}
         </div>
     );
 };
